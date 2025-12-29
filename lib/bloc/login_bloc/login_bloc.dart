@@ -9,7 +9,7 @@ class LoginBloc extends Bloc<LoginEvents, LoginStates>{
 
   LoginRepository loginRepository = LoginRepository();
 
-  LoginBloc(): super( LoginStates()){
+  LoginBloc(): super(LoginStates()){
     on<UserNameChanged> (_userNameChanged);
     on<PasswordChanged> (_passwordChanged);
     on<LoginApi> (_onloginApi);
