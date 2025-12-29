@@ -1,0 +1,50 @@
+import 'package:clean_architecture_demu_project/config/constants/colors.dart';
+import 'package:flutter/material.dart';
+
+class CustomAlertDiaglogeBox {
+  static Future<void> show(
+    BuildContext context, {
+    required String title,
+    required String message,
+
+
+    String? primaryButtonText,
+    VoidCallback? onPrimaryPressed,
+
+    String? secondaryButtonText,
+    VoidCallback? onSecondaryPressed,
+
+    bool barrierDismissible = true,
+  }) {
+    return showDialog(
+      context: context,
+      barrierDismissible: barrierDismissible,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: AppColors.whiteColor,
+          title: Text(title),
+          content: Text(message),
+          actions: [
+            if (secondaryButtonText != null)
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop(); 
+                  onSecondaryPressed?.call();  
+                },
+                child: Text(secondaryButtonText),
+              ),
+
+            if (primaryButtonText != null)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop(); 
+                  onPrimaryPressed?.call();   
+                },
+                child: Text(primaryButtonText),
+              ),
+          ],
+        );
+      },
+    );
+  }
+}
