@@ -22,6 +22,9 @@ class CustomAlertDiaglogeBox {
       builder: (context) {
         return AlertDialog(
           backgroundColor: AppColors.whiteColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadiusGeometry.circular(10),
+          ),
           title: Text(title),
           content: Text(message),
           actions: [
@@ -31,16 +34,27 @@ class CustomAlertDiaglogeBox {
                   Navigator.of(context).pop(); 
                   onSecondaryPressed?.call();  
                 },
-                child: Text(secondaryButtonText),
+                child: Text(secondaryButtonText,
+                style: TextStyle(color: AppColors.blackColor),
+                ),
               ),
 
             if (primaryButtonText != null)
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.greenColor,
+                  shadowColor: AppColors.grayColor.withOpacity(.5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(3),
+                  )
+                ),
                 onPressed: () {
                   Navigator.of(context).pop(); 
                   onPrimaryPressed?.call();   
                 },
-                child: Text(primaryButtonText),
+                child: Text(primaryButtonText,
+                style: TextStyle(color: AppColors.whiteColor),
+                ),
               ),
           ],
         );
