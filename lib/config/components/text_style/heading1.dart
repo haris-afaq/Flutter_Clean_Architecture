@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class Heading1 extends StatelessWidget {
   final String title;
   final Color titleColor;
-  const Heading1({
+  const Heading1({super.key, 
     required this.title,
      this.titleColor = AppColors.blackColor
   });

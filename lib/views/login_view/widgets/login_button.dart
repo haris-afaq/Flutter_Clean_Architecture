@@ -44,7 +44,7 @@ class LoginButton extends StatelessWidget {
     child: BlocBuilder<LoginBloc , LoginStates>(
       buildWhen: (previous, current) => false,
       builder: (context, state){
-      return MainButton(title: "Login",
+      return MainButton( title: "Login",
                   onTap: (){
                     if(formKey.currentState!.validate()){
                       context.read<LoginBloc>().add(LoginApi());

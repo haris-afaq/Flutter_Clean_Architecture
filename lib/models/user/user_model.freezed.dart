@@ -22,13 +22,12 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$UserModel {
   /*
-      Getting token and error message from API,
-      so we are:
+      Getting token and error message from API, so:
       - Creating only token and message fields
-      - Assigning default values
-      - Using JsonKey to map API response keys
+      - Assigning default values to avoid null checks
+      - Using JsonKey to map API response keys from the backend
     */
-  /// Token returned on successful login
+  /// Token returned on success
   @JsonKey(name: 'accessToken')
   String get token => throw _privateConstructorUsedError;
 
@@ -144,13 +143,12 @@ class _$UserModelImpl implements _UserModel {
       _$$UserModelImplFromJson(json);
 
   /*
-      Getting token and error message from API,
-      so we are:
+      Getting token and error message from API, so:
       - Creating only token and message fields
-      - Assigning default values
-      - Using JsonKey to map API response keys
+      - Assigning default values to avoid null checks
+      - Using JsonKey to map API response keys from the backend
     */
-  /// Token returned on successful login
+  /// Token returned on success
   @override
   @JsonKey(name: 'accessToken')
   final String token;
@@ -202,13 +200,12 @@ abstract class _UserModel implements UserModel {
       _$UserModelImpl.fromJson;
 
   /*
-      Getting token and error message from API,
-      so we are:
+      Getting token and error message from API, so:
       - Creating only token and message fields
-      - Assigning default values
-      - Using JsonKey to map API response keys
+      - Assigning default values to avoid null checks
+      - Using JsonKey to map API response keys from the backend
     */
-  /// Token returned on successful login
+  /// Token returned on success
   @override
   @JsonKey(name: 'accessToken')
   String get token;

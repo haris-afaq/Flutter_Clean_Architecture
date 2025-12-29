@@ -72,42 +72,4 @@ void _onloginApi(LoginApi event, Emitter<LoginStates> emit) async {
     ));
   });
 }
-
-
-
-    //  void _onloginApi(LoginApi event, Emitter<LoginStates> emit) async{
-    //   Map data = {
-    //    "username": state.userName,
-    //    "password": state.password,
-    //       //   "username": "emilys",
-    //       //  "password": "emilyspass"
-    //   };
-    //   emit(state.copyWith(
-    //     postApiStatus: PostApiStatus.loading,
-    //   ));
-
-    //  await loginRepository.loginApi(data).then((value){
-    //   if(value.message.isNotEmpty){
-    //      emit(state.copyWith(
-    //       message: value.message.toString(),
-    //       postApiStatus: PostApiStatus.error,
-    //     ));
-       
-    //   }
-    //   else{
-    //     emit(state.copyWith(
-    //       message: value.message.toString(),
-    //       postApiStatus: PostApiStatus.success,
-    //     ));
-    //   }
-
-    //   }).onError((error, StackTrace){
-
-    //     emit(state.copyWith(message: error.toString(),
-    //               postApiStatus: PostApiStatus.error,
-    //     ));
-    //   });
-
-    //  }
-
 }

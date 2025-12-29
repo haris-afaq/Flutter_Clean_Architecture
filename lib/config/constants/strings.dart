@@ -4,5 +4,6 @@ class AppStrings{
   static const String loginSuccessfull ="Account login successfull";
   static const String alertDialogePrimaryText = "Yes";
   static const String alertDialogeSecondaryText = "No";
+  // All other Strings
   
 }
