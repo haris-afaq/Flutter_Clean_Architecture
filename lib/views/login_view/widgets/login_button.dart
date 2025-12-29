@@ -4,6 +4,7 @@ import 'package:clean_architecture_demu_project/bloc/login_bloc/login_states.dar
 import 'package:clean_architecture_demu_project/config/components/custom_snackbar.dart';
 import 'package:clean_architecture_demu_project/config/components/main_button.dart';
 import 'package:clean_architecture_demu_project/config/constants/colors.dart';
+import 'package:clean_architecture_demu_project/config/constants/strings.dart';
 import 'package:clean_architecture_demu_project/config/routes/route_names.dart';
 import 'package:clean_architecture_demu_project/utils/enums.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class LoginButton extends StatelessWidget {
                              Navigator.pushNamedAndRemoveUntil(context, RouteNames.homeScreen, (route)=> false);
        CustomSnackbar.show(
         context,
-        text: "Account Login Successfull",
+        text: AppStrings.loginSuccessfull,
         backgroundColor: AppColors.greenColor
        );
       }
