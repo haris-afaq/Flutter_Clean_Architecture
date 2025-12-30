@@ -21,7 +21,7 @@ MoviesModel _$MoviesModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MoviesModel {
-  String get total => throw _privateConstructorUsedError;
+  int get total => throw _privateConstructorUsedError;
   int get page => throw _privateConstructorUsedError;
   int get pages => throw _privateConstructorUsedError;
   @JsonKey(name: "tv_shows")
@@ -45,7 +45,7 @@ abstract class $MoviesModelCopyWith<$Res> {
   ) = _$MoviesModelCopyWithImpl<$Res, MoviesModel>;
   @useResult
   $Res call({
-    String total,
+    int total,
     int page,
     int pages,
     @JsonKey(name: "tv_shows") List<TvShows> tvShow,
@@ -77,7 +77,7 @@ class _$MoviesModelCopyWithImpl<$Res, $Val extends MoviesModel>
             total: null == total
                 ? _value.total
                 : total // ignore: cast_nullable_to_non_nullable
-                      as String,
+                      as int,
             page: null == page
                 ? _value.page
                 : page // ignore: cast_nullable_to_non_nullable
@@ -106,7 +106,7 @@ abstract class _$$MoviesModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call({
-    String total,
+    int total,
     int page,
     int pages,
     @JsonKey(name: "tv_shows") List<TvShows> tvShow,
@@ -137,7 +137,7 @@ class __$$MoviesModelImplCopyWithImpl<$Res>
         total: null == total
             ? _value.total
             : total // ignore: cast_nullable_to_non_nullable
-                  as String,
+                  as int,
         page: null == page
             ? _value.page
             : page // ignore: cast_nullable_to_non_nullable
@@ -159,7 +159,7 @@ class __$$MoviesModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MoviesModelImpl implements _MoviesModel {
   _$MoviesModelImpl({
-    this.total = '',
+    this.total = 0,
     this.page = 0,
     this.pages = 0,
     @JsonKey(name: "tv_shows") final List<TvShows> tvShow = const <TvShows>[],
@@ -170,7 +170,7 @@ class _$MoviesModelImpl implements _MoviesModel {
 
   @override
   @JsonKey()
-  final String total;
+  final int total;
   @override
   @JsonKey()
   final int page;
@@ -228,7 +228,7 @@ class _$MoviesModelImpl implements _MoviesModel {
 
 abstract class _MoviesModel implements MoviesModel {
   factory _MoviesModel({
-    final String total,
+    final int total,
     final int page,
     final int pages,
     @JsonKey(name: "tv_shows") final List<TvShows> tvShow,
@@ -238,7 +238,7 @@ abstract class _MoviesModel implements MoviesModel {
       _$MoviesModelImpl.fromJson;
 
   @override
-  String get total;
+  int get total;
   @override
   int get page;
   @override

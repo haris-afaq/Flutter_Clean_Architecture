@@ -6,7 +6,7 @@ part 'movies.g.dart';
 @freezed
 class MoviesModel with _$MoviesModel {
   factory MoviesModel({
-    @Default('') String total,
+    @Default('') int total,
     @Default(0) int page,
     @Default(0) int pages,
     @Default(<TvShows>[]) @JsonKey(name: "tv_shows") List<TvShows> tvShow,

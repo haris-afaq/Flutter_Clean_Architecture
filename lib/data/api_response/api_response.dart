@@ -1,24 +1,38 @@
 import 'package:clean_architecture_demu_project/utils/enums.dart';
 
 class ApiResponse<T> {
-  // <T> = dynamic data
-  Status? status;
+  Status status;
   T? data;
   String? message;
 
-  ApiResponse(
-    this.status,
-    this.data,
-    this.message
-  );
+  ApiResponse.loading() : status = Status.loading;
 
-  // Api response Constructors
-  // Loading....
-  ApiResponse.loading(): status = Status.loading;
+  ApiResponse.completed(this.data) : status = Status.completed;
 
-  // Error....
-  ApiResponse.error(this.data): status= Status.error;
-
-  // Success
-  ApiResponse.completed(this.data): status = Status.completed;
+  ApiResponse.error(this.message) : status = Status.error;
 }
+
+// import 'package:clean_architecture_demu_project/utils/enums.dart';
+
+// class ApiResponse<T> {
+//   // <T> = dynamic data
+//   Status? status;
+//   T? data;
+//   String? message;
+
+//   ApiResponse(
+//     this.status,
+//     this.data,
+//     this.message
+//   );
+
+//   // Api response Constructors
+//   // Loading....
+//   ApiResponse.loading(): status = Status.loading;
+
+//   // Error....
+//   ApiResponse.error(this.data): status= Status.error;
+
+//   // Success
+//   ApiResponse.completed(this.data): status = Status.completed;
+// }
